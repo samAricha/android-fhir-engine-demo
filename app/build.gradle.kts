@@ -46,6 +46,15 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
+    //fhir-engine
     implementation("com.google.android.fhir:engine:0.1.0-beta03")
     implementation("androidx.fragment:fragment-ktx:1.5.5")
+
+    //structured-data-capture
+    implementation("com.google.android.fhir:data-capture:1.0.0")
+    implementation("androidx.fragment:fragment-ktx:1.5.5")
+
+    //material theme
+    implementation ("com.google.android.material:material:1.0.0")
+
 }

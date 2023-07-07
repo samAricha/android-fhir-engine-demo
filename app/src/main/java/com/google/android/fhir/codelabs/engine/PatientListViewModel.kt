@@ -73,6 +73,8 @@ class PatientListViewModel(application: Application) : AndroidViewModel(applicat
           )
         }
 
+
+
       val patientsFromTaunton =
         fhirEngine.search<Patient> {
           filter(
