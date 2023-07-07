@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+<!--        <domain includeSubdomains="true">hapi.fhir.org</domain>-->
+        <domain includeSubdomains="true">ed89-41-89-128-5.ngrok-free.app</domain>
+    </domain-config>
+</network-security-config>
