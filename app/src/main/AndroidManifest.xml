@@ -11,6 +11,12 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.Codelab">
         <activity
+            android:name=".NutritionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sdc.CarePlanSDCActivity"
+            android:exported="false" />
+        <activity
             android:name=".sdc.MainSDCActivity"
             android:exported="false" />
         <activity

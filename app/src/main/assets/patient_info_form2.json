@@ -1,0 +1,161 @@
+{
+  "item": [
+    {
+      "item": [
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "54125-0",
+              "display": "Patient's Name:",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/54125-0",
+          "text": "Patient's Name:"
+        },
+        {
+          "type": "decimal",
+          "code": [
+            {
+              "code": "21112-8",
+              "display": "Patient's Date of Birth:",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "code": "{mm/dd/yyyy}",
+                "display": "{mm/dd/yyyy}",
+                "system": "http://unitsofmeasure.org"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/21112-8",
+          "text": "Patient's Date of Birth:"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "46106-1",
+              "display": "Patient's Medical Record #:",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/46106-1",
+          "text": "Patient's Medical Record #:"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "74698-2",
+              "display": "Patient's Gender:",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/74698-2",
+          "text": "Patient's Gender:",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA2-8",
+                "display": "Male",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "a"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA3-6",
+                "display": "Female",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "b"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA4489-6",
+                "display": "Unknown",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "c"
+                }
+              ]
+            }
+          ],
+          "item": [
+            {
+              "text": "The patient's documented sex (gender) on arrival at the hospital. This term was created for the \"Patient gender\" data element on the Agency for Healthcare Research and Quality (AHRQ) Healthcare Event Reporting Form (HERF), version 1.2. [https://ushik.ahrq.gov/ViewItemDetails?&system=mdr&itemKey=169064000&enableAsynchronousLoading=true]",
+              "type": "display",
+              "linkId": "/74698-2-help",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "7089047218252",
+      "code": [
+        {
+          "code": "74772-5",
+          "display": "Patient information"
+        }
+      ],
+      "text": "Patient information",
+      "required": false
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "title": "New Form",
+  "status": "draft"
+}

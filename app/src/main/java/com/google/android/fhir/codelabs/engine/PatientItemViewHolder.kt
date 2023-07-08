@@ -16,22 +16,45 @@
 
 package com.google.android.fhir.codelabs.engine
 
+import android.content.Intent
+import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.fhir.codelabs.engine.databinding.PatientListItemViewBinding
+import com.google.android.fhir.codelabs.engine.sdc.CarePlanSDCActivity
 import org.hl7.fhir.r4.model.Patient
 
 class PatientItemViewHolder(binding: PatientListItemViewBinding) :
-  RecyclerView.ViewHolder(binding.root) {
+  RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+
+  init {
+    itemView.setOnClickListener(this)
+  }
 
   private val nameTextView: TextView = binding.name
   private val genderTextView: TextView = binding.gender
   private val cityTextView = binding.city
 
+  private lateinit var patientItem: Patient
+
+
   fun bind(patientItem: Patient) {
-    nameTextView.text =
-      patientItem.name.first().let { it.given.joinToString(separator = " ") + " " + it.family }
-    genderTextView.text = patientItem.gender.display
-    cityTextView.text = patientItem.address.singleOrNull()?.city
+    this.patientItem = patientItem
+    nameTextView.text = patientItem.id
+    genderTextView.text = patientItem.toString()
+    cityTextView.text = patientItem.address.toString()
+//    nameTextView.text =
+//      patientItem.name.first().let { it.given.joinToString(separator = " ") + " " + it.family }
+//    genderTextView.text = patientItem.gender.display
+//    cityTextView.text = patientItem.address.singleOrNull()?.city
   }
+
+
+  override fun onClick(view: View) {
+    val context = view.context
+    val intent = Intent(context, CarePlanSDCActivity::class.java)
+    intent.putExtra("patientId", patientItem.id)
+    context.startActivity(intent)
+  }
+
 }

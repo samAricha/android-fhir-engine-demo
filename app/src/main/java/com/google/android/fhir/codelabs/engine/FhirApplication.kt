@@ -34,7 +34,7 @@ class FhirApplication : Application() {
         enableEncryptionIfSupported = true,
         RECREATE_AT_OPEN,
         ServerConfiguration(
-          baseUrl = "https://ed89-41-89-128-5.ngrok-free.app/fhir/",
+          baseUrl = "https://285a-105-164-50-17.ngrok-free.app/fhir/",
 //          baseUrl = "https://hapi.fhir.org/baseR4/",
 //          baseUrl = "http://10.0.2.2:8080/fhir/",
           httpLogger =

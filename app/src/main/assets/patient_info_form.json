@@ -1,0 +1,530 @@
+{
+  "item": [
+    {
+      "item": [
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45392-8",
+              "display": "Patient's First Name",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/45392-8",
+          "text": "Patient's First Name"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "52461-1",
+              "display": "Patient's Middle Initial or Name",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/52461-1",
+          "text": "Patient's Middle Initial or Name"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45394-4",
+              "display": "Patient's Last Name",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/45394-4",
+          "text": "Patient's Last Name"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "52462-9",
+              "display": "Patient's Nickname (optional)",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/52462-9",
+          "text": "Patient's Nickname (optional)"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45397-7",
+              "display": "Patient's Medicare Health Insurance Number",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/45397-7",
+          "text": "Patient's Medicare Health Insurance Number"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45400-9",
+              "display": "Patient's Medicaid Number",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/45400-9",
+          "text": "Patient's Medicaid Number"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "52463-7",
+              "display": "Patient's Facility/Agency Identification Number (for internal tracking)",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/52463-7",
+          "text": "Patient's Facility/Agency Identification Number (for internal tracking)"
+        },
+        {
+          "type": "decimal",
+          "code": [
+            {
+              "code": "52455-3",
+              "display": "Admission date",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "code": "{mm/dd/yyyy}",
+                "display": "{mm/dd/yyyy}",
+                "system": "http://unitsofmeasure.org"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/52455-3",
+          "text": "Admission date"
+        },
+        {
+          "type": "decimal",
+          "code": [
+            {
+              "code": "21112-8",
+              "display": "Birth date",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "code": "{mm/dd/yyyy}",
+                "display": "{mm/dd/yyyy}",
+                "system": "http://unitsofmeasure.org"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/21112-8",
+          "text": "Birth date"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45396-9",
+              "display": "Social Security #",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/45396-9",
+          "text": "Social Security #"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "46098-0",
+              "display": "Gender",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/46098-0",
+          "text": "Gender",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA2-8",
+                "display": "Male",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "1"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA3-6",
+                "display": "Female",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "46463-6",
+              "display": "Race or ethnicity",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/46463-6",
+          "text": "Race or ethnicity",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA6155-1",
+                "display": "American Indian or Alaska Native",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "1"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA6156-9",
+                "display": "Asian",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "2"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA6162-7",
+                "display": "Black or African-American",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "3"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA6214-6",
+                "display": "Hispanic or Latino",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "4"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA6266-6",
+                "display": "Native Hawaiian or Pacific Islander",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "5"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA4457-3",
+                "display": "White",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "6"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA4489-6",
+                "display": "Unknown",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "UK"
+                }
+              ]
+            }
+          ],
+          "item": [
+            {
+              "text": "The groups or populations to which the patient is affiliated, as identified by the patient or caregiver.",
+              "type": "display",
+              "linkId": "/46463-6-help",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "52553-5",
+              "display": "Is English the patient's primary language?",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/52553-5",
+          "text": "Is English the patient's primary language?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA32-8",
+                "display": "No",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "0"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA33-6",
+                "display": "Yes",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "52554-3",
+              "display": "If English is not the patient's primary language, what is the patient's primary language?",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/52554-3",
+          "text": "If English is not the patient's primary language, what is the patient's primary language?"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "54588-9",
+              "display": "Interpreter needed",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/54588-9",
+          "text": "Interpreter needed",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA32-8",
+                "display": "No",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "0"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA33-6",
+                "display": "Yes",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "1"
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "LA11137-9",
+                "display": "Unable to determine",
+                "system": "http://loinc.org"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "2"
+                }
+              ]
+            }
+          ],
+          "item": [
+            {
+              "text": "Patient/resident's need or want an interpreter to communicate with a doctor or health care staff",
+              "type": "display",
+              "linkId": "/54588-9-help",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "6426261252991",
+      "code": [
+        {
+          "code": "52460-3",
+          "display": "Patient information"
+        }
+      ],
+      "text": "Patient information",
+      "required": false
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "title": "New Form",
+  "status": "draft"
+}

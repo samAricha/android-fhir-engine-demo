@@ -75,26 +75,26 @@ class PatientListViewModel(application: Application) : AndroidViewModel(applicat
 
 
 
-      val patientsFromTaunton =
-        fhirEngine.search<Patient> {
-          filter(
-            Patient.ADDRESS_CITY,
-            {
-              modifier = StringFilterModifier.CONTAINS
-              value = "Taunton"
-            }
-          )
-        }
-
-      patientsFromWakefield.forEach {
-        it.address.first().city = "Taunton"
-        fhirEngine.update(it)
-      }
-
-      patientsFromTaunton.forEach {
-        it.address.first().city = "Wakefield"
-        fhirEngine.update(it)
-      }
+//      val patientsFromTaunton =
+//        fhirEngine.search<Patient> {
+//          filter(
+//            Patient.ADDRESS_CITY,
+//            {
+//              modifier = StringFilterModifier.CONTAINS
+//              value = "Taunton"
+//            }
+//          )
+//        }
+//
+//      patientsFromWakefield.forEach {
+//        it.address.first().city = "Taunton"
+//        fhirEngine.update(it)
+//      }
+//
+//      patientsFromTaunton.forEach {
+//        it.address.first().city = "Wakefield"
+//        fhirEngine.update(it)
+//      }
 
       triggerOneTimeSync()
     }

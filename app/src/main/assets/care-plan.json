@@ -1,0 +1,117 @@
+{
+  "item": [
+    {
+      "item": [
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "61146-7",
+              "display": "Goals",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/61146-7",
+          "text": "Goals"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "75310-3",
+              "display": "Health concern Doc",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/75310-3",
+          "text": "Health concern Doc",
+          "item": [
+            {
+              "text": "A section that contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management.",
+              "type": "display",
+              "linkId": "/75310-3-help",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "11383-7",
+              "display": "Patient problem outcome",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/11383-7",
+          "text": "Patient problem outcome"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "62387-6",
+              "display": "Interventions",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/62387-6",
+          "text": "Interventions",
+          "item": [
+            {
+              "text": "This term was originally created for, though not limited in use to, the HL7 Implementation Guide for CDA: Progress Note. The Interventions section contains information about the specific interventions provided during the healthcare visit. Depending on the type of intervention(s) provided (procedural, education, application of assistive equipment, etc.), the details will vary but may include specification of frequency, intensity, and duration.",
+              "type": "display",
+              "linkId": "/62387-6-help",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "text": "Help-Button",
+                    "coding": [
+                      {
+                        "code": "help",
+                        "display": "Help-Button",
+                        "system": "http://hl7.org/fhir/questionnaire-item-control"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "6679024119804",
+      "code": [
+        {
+          "code": "81215-6",
+          "display": "Care plan - recommended C-CDA R2.0 and R2.1 sections"
+        }
+      ],
+      "text": "Care plan - recommended C-CDA R2.0 and R2.1 sections",
+      "required": false
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "title": "New Form",
+  "status": "draft"
+}

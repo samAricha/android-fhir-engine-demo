@@ -17,33 +17,35 @@ import kotlinx.coroutines.launch
 import org.hl7.fhir.r4.model.Patient
 import org.hl7.fhir.r4.model.Questionnaire
 
-class MainSDCActivity : AppCompatActivity() {
+class CarePlanSDCActivity : AppCompatActivity() {
 
     var questionnaireJsonString: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_sdcactivity)
+        setContentView(R.layout.activity_care_plan_sdcactivity)
 
         // add a questionnaire fragment.
         // Configure a QuestionnaireFragment
-        questionnaireJsonString = getStringFromAssets("new-patient-registration-paginated.json")
+        questionnaireJsonString = getStringFromAssets("care-plan.json")
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(
-                    R.id.fragment_container_view,
+                    R.id.care_plan_fragment_container_view,
                     QuestionnaireFragment.builder().setQuestionnaire(questionnaireJsonString!!).build()
                 )
             }
         }
+
     }
 
     private fun submitQuestionnaire(){
+
         val fhirEngine = FhirApplication.fhirEngine(application)
         // Get a questionnaire response
-        val fragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view)
+        val fragment = supportFragmentManager.findFragmentById(R.id.care_plan_fragment_container_view)
                 as QuestionnaireFragment
         val questionnaireResponse = fragment.getQuestionnaireResponse()
 
@@ -70,7 +72,10 @@ class MainSDCActivity : AppCompatActivity() {
 
 
         }
+
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.submit_menu, menu)
